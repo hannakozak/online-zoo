@@ -1,3 +1,90 @@
-body {
-  background: lightseagreen;
+.wrapper {
+  position: relative;
+  min-width: 160rem;
+  margin: 0 auto;
+}
+/* header */
+
+header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  padding: 0 22rem;
+
+  background: var(--black);
+  backdrop-filter: blur(2px);
+  color: var(--white);
+}
+
+.header__logo {
+  position: relative;
+  flex-grow: 1;
+  padding: 1px;
+  width: 8.2rem;
+  height: 5.2rem;
+  border: 1.18841px solid var(--white);
+  border-radius: 2px;
+}
+
+.header__logo img {
+  position: absolute;
+  left: 12.23px;
+  top: 21.64px;
+
+  width: 0.703rem;
+  height: 2.098rem;
+}
+
+.header__logo h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 120%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+header a {
+  color: var(--white);
+}
+
+header nav {
+  flex-grow: 4;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding-left: 3.7rem;
+}
+
+header nav ul :last-child {
+  margin-left: auto;
+}
+
+header nav ul li {
+  padding: 3rem;
+}
+header nav ul li :last-child {
+  padding: 0;
+}
+header nav ul li a {
+  color: var(--white);
+}
+
+.active {
+  background: linear-gradient(113.96deg, var(--orange-dark) 1.49%, var(--orange-light) 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

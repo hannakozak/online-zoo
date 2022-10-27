@@ -1,0 +1,30 @@
+:root {
+  --black: #000;
+  --white: #ffffff;
+  --orange-light: #fe9013;
+  --orange-dark: #f9804b;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 140%;
+}
+
+a {
+  text-decoration: none;
+}
