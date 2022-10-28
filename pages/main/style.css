@@ -1,3 +1,27 @@
+/* typography */
+h2 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+
+  color: var(--gray);
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+
+  color: var(--gray);
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+
+  color: var(--gray);
+}
 .wrapper {
   position: relative;
   min-width: 160rem;
@@ -157,4 +181,26 @@ header nav ul li a {
 }
 .watchAnimal__text span {
   color: var(--yellow);
+}
+
+/* backstage section */
+.backstage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 9rem;
+  padding: 14rem 22rem;
+  height: auto;
+
+  background: url(/assets/images/flower-foto1.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 1.2rem;
+  border: none;
+}
+
+.backstage__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.85rem;
 }
