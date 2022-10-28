@@ -1,8 +1,35 @@
 .wrapper {
   position: relative;
   min-width: 160rem;
+  height: 497.5rem;
   margin: 0 auto;
 }
+
+.button--orange {
+  background: linear-gradient(113.96deg, var(--orange-dark) 1.49%, var(--orange-light) 101.44%);
+  color: var(--white);
+
+  padding: 1.8rem 8.1rem;
+  border: none;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button--orange:hover {
+  background: var(--orange-hover);
+}
+
+.button--round {
+  border-radius: 25px;
+}
+
 /* header */
 
 header {
@@ -87,4 +114,47 @@ header nav ul li a {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+/*Watch Your Favorite Animal Section*/
+
+#watchAnimal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 6.4rem;
+  width: 100%;
+  height: 78rem;
+  padding: 9.38rem 32.8rem;
+
+  background-image: url("/assets/images/giant-panda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.watchAnimal__elipse {
+  width: 46.5rem;
+  height: 46.5rem;
+  background: linear-gradient(113.96deg, var(--orange-dark) 1.49%, var(--orange-light) 101.44%);
+  border-radius: 50%;
+}
+
+.watchAnimal__text {
+  width: 50.031rem;
+  height: 40rem;
+  margin: 7.2rem;
+
+  color: var(--white);
+
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 106.496px;
+  line-height: 75%;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+.watchAnimal__text span {
+  color: var(--yellow);
 }
