@@ -4,6 +4,8 @@
   --orange-light: #fe9013;
   --orange-dark: #f9804b;
   --orange-hover: #e47209;
+  --orange-card: #fa6f32;
+
   --yellow: #ffee2e;
   --gray: #333b41;
 }
@@ -18,15 +20,6 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 140%;
 }
 
 a {
