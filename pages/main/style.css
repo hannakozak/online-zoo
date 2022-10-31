@@ -198,7 +198,7 @@ header nav ul li a:active {
 /*Watch Your Favorite Animal Section*/
 
 #watchAnimal {
-  background: url("assets/images/giant-panda.jpg") var(--black) no-repeat;
+  background: url("../../assets/images/giant-panda.jpg") var(--black) no-repeat;
   background-position: bottom center;
 }
 
@@ -243,7 +243,7 @@ header nav ul li a:active {
 /* backstage section */
 .backstage {
   width: 100%;
-  background: url(assets/images/flower-foto1.jpg);
+  background: url(../../assets/images/flower-foto1.jpg);
   background-repeat: no-repeat;
   background-position: 100% 12px;
   border: none;
@@ -266,7 +266,7 @@ header nav ul li a:active {
 /* pets section */
 .pets {
   width: 100%;
-  background-image: url("/assets/images/palm_foto.jpg"), url("/assets/images/strelitzia 1.jpg");
+  background-image: url("../../assets/images/palm_foto.jpg"), url("../../assets/images/strelitzia 1.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom left, bottom right;
 }
