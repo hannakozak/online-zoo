@@ -1,4 +1,4 @@
-const navigationLinks = document.getElementsByClassName("header__link");
+/*const navigationLinks = document.getElementsByClassName("header__link");
 
 // add active state to navigation links on click event
 for (let i = 0; i < navigationLinks.length; i++) {
@@ -8,3 +8,4 @@ for (let i = 0; i < navigationLinks.length; i++) {
     this.className += " active";
   });
 }
+*/
