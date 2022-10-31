@@ -486,7 +486,7 @@ header nav ul li a:active {
 
 .testimonials {
   width: 100%;
-  background: url("/assets/images/leav_foto.jpg") no-repeat bottom right;
+  background: url("../../assets/images/leav_foto.jpg") no-repeat bottom right;
 }
 .testimonials__wrapper {
   display: flex;
