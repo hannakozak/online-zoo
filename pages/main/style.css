@@ -124,6 +124,10 @@ header {
   cursor: pointer;
 }
 
+.header__logo:hover {
+  background-color: var(--orange-hover);
+}
+
 .header__logo img {
   position: absolute;
   left: 12.23px;
@@ -286,6 +290,14 @@ header nav ul li a:active {
   justify-content: center;
   align-items: center;
   gap: 18px;
+}
+.pets__content a {
+  transition: all 2s ease-out 100ms;
+}
+
+.pets__content a:hover {
+  transform: scale(1.2);
+  border-radius: 50%;
 }
 
 .pets__gallery {
