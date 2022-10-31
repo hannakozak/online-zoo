@@ -198,7 +198,7 @@ header nav ul li a:active {
 /*Watch Your Favorite Animal Section*/
 
 #watchAnimal {
-  background: url("/assets/images/giant-panda.jpg") var(--black) no-repeat;
+  background: url("../../assets/images/giant-panda.jpg") var(--black) no-repeat;
   background-position: bottom center;
 }
 
