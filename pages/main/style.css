@@ -526,7 +526,7 @@ header nav ul li a:active {
 .testimonials__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 140px 0;
   padding-bottom: 110px;
@@ -542,29 +542,53 @@ header nav ul li a:active {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 48px;
-  gap: 20px;
+  padding-top: 46px;
+  gap: 30px;
 }
 
 .testimonials__card {
-  width: 268px;
+  width: 267px;
   height: 391px;
   background: var(--testimonials-background);
-  border-width: 2px;
-  border-style: solid;
-  border-image: linear-gradient(
-      to right,
-      rgba(254, 189, 171, 0.74) 6.48%,
-      rgba(243, 169, 248, 0.66) 22.51%,
-      #e0d8f0 45.57%
-    )
-    1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.testimonials__card:after {
+  content: "";
+  position: absolute;
+  inset: 0;
   border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .card__feedback {
-  max-height: 309px;
-  padding: 22px;
+  width: 237px;
+  height: 309px;
+
   overflow-y: hidden;
 }
 
