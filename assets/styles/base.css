@@ -9,6 +9,11 @@
   --yellow: #ffee2e;
   --gray: #333b41;
   --gray-light: #f1f3f2;
+  --gray--medium: #404950;
+  --gray--blue: #72828e;
+  --green: #4b9200;
+  --background--light: #c4c4c4;
+  --red--error: #d31414;
 }
 
 *,
