@@ -553,9 +553,10 @@ header nav ul li a:active {
   background: var(--testimonials-background);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: relative;
+  border-radius: 20px;
+  padding-top: 12px;
 }
 
 .testimonials__card:after {
@@ -586,20 +587,24 @@ header nav ul li a:active {
   pointer-events: none;
 }
 
-.card__feedback {
+.testimonials__card p.card__feedback {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #767474;
   width: 237px;
   height: 309px;
-
   overflow-y: hidden;
+  padding-top: 8px;
 }
 
 .card__header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  gap: 5px;
+  gap: 10px;
   align-items: center;
-  padding: 5px 15.5px;
+  padding: 0px 15.5px;
 }
 
 .card__description {
@@ -611,8 +616,36 @@ progress {
   width: 599px;
   height: 8px;
   margin: 20px;
-  border: 1px solid var(--orange-dark);
   border-radius: 5px;
+  position: relative;
+}
+
+progress::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 5px;
+  padding: 0.5px;
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 progress::-webkit-progress-bar {
   color: (--white);
