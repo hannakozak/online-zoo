@@ -78,6 +78,11 @@ p {
   background: var(--orange-hover);
 }
 
+.button--orange:active,
+.button--orange:focus {
+  background: var(--green);
+}
+
 .button--round {
   border-radius: 25px;
 }
@@ -409,9 +414,8 @@ header nav ul li a:active {
   background: var(--gray--blue);
   z-index: 1;
 }
-/* donate */
+/* donate options*/
 
-/* removing arrows */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -465,6 +469,7 @@ input[type="number"] {
   border-radius: 50%;
   display: grid;
   place-content: center;
+  z-index: 10;
 }
 
 .options__item input[type="radio"]:default {
@@ -484,7 +489,6 @@ input[type="number"] {
 .options__item input[type="radio"]:hover,
 .options__item input[type="radio"]:focus {
   appearance: none;
-  margin: 0;
   font: inherit;
   color: var(--orange-hover);
   background-color: var(--green);
@@ -492,8 +496,6 @@ input[type="number"] {
   height: 16px;
   border: 1px solid currentColor;
   border-radius: 50%;
-  display: grid;
-  place-content: center;
 }
 
 .options__item input[type="radio"]:default + .options__label {
@@ -503,6 +505,15 @@ input[type="number"] {
   display: grid;
   place-content: center;
   margin-left: -30px;
+}
+
+.options__item input[type="radio"]:hover + .options__label,
+.options__item input[type="radio"]:active + .options__label,
+.options__item input[type="radio"]:focus + .options__label {
+  background-color: transparent;
+  height: 43px;
+  display: grid;
+  place-content: center;
 }
 
 .options__label {

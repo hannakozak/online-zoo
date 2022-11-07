@@ -82,6 +82,11 @@ p {
   background: var(--orange-hover);
 }
 
+.button--orange:active,
+.button--orange:focus {
+  background: var(--green);
+}
+
 .button--round {
   border-radius: 25px;
 }
