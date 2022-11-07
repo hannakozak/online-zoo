@@ -521,7 +521,8 @@ header nav ul li a:active {
 
 .testimonials {
   width: 100%;
-  background: url("../../assets/images/leav_foto.jpg") no-repeat bottom right;
+  background: url("../../assets/images/leav_foto.jpg") no-repeat bottom -130px right;
+  padding-bottom: 70px;
 }
 .testimonials__wrapper {
   display: flex;
@@ -623,6 +624,7 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background-color: (--white);
 }
+
 /* footer */
 .footer {
   width: 100%;
@@ -631,24 +633,16 @@ progress::-moz-progress-bar {
   color: var(--white);
 }
 
-.footer__wrapper {
-  padding: 40px 2px;
-  padding-right: 0px;
-}
-
-.footer__wrapper {
-  margin-top: 68px;
-}
-
 .footer--donate {
   margin-top: 68px;
-  padding: 16px 48px;
+  padding: 16px 50px;
 }
 .footer a {
   color: var(--white);
 }
 
 .footer__wrapper {
+  padding: 42px 0px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -657,32 +651,60 @@ progress::-moz-progress-bar {
 .footer__social {
   display: flex;
   flex-direction: column;
-  padding-top: 44px;
-  gap: 6px;
+  padding-top: 48px;
+  padding-left: -3px;
+  gap: 8px;
 }
 
-.social--item:hover,
-.scial--item:active {
-  background: var(--orange-dark);
-  width: 120px;
-  border: 1px solid var(--orange-dark);
+.social--item p:hover,
+.scial--item p:active,
+.social--item img:hover {
+  color: var(--green);
 }
 
 .social--item {
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+.social--item-icon {
+  background: rgba(196, 196, 196, 0.5);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.social--item-icon img {
+  width: 16px;
+  height: 16px;
+}
+
+.social--item p {
+  color: var(--white);
 }
 
 .column--2 {
   align-self: flex-end;
-  padding: 5px 0;
-  padding-left: 12px;
+  padding-left: 8px;
 }
 
 .column--2 nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 54px;
+  justify-content: space-around;
+  gap: 38px;
+}
+
+.column--2 nav ul:last-child {
+  margin-left: -5px;
 }
 
 .column--3 {
@@ -692,22 +714,21 @@ progress::-moz-progress-bar {
 
 .column--3 p {
   color: var(--white);
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .footer__form {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  margin-left: 20px;
+  margin-top: 15px;
+  gap: 10px;
 }
 
 .footer__form input {
   width: 228px;
   height: 42px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
   border: 1px solid var(--orange-dark);
   background: var(--black);
   color: var(--white);
@@ -715,15 +736,10 @@ progress::-moz-progress-bar {
   padding-left: 10px;
 }
 
-.button__form button {
+.button__submit {
   width: 129px;
   height: 42px;
   cursor: pointer;
-}
-
-.button__submit {
-  margin-top: 20px;
-  padding: 13px 48px;
   background: var(--gray-light);
   border: 1px solid var(--gray);
   color: var(--black);
@@ -731,14 +747,14 @@ progress::-moz-progress-bar {
 }
 
 .button__submit:focus {
-  background: #f1f3f2;
-  border: 1px solid #4b9200;
-  color: #4b9200;
+  background: var(--gray-light);
+  border: 1px solid var(--green);
+  color: var(--green);
 }
 
 .footer__form input:focus:invalid + .button__submit {
-  color: #d31414;
-  border: 1px solid #d31414;
+  color: var(--red--error);
+  border: 1px solid var(--red--error);
 }
 
 .footer__copywrittes {
