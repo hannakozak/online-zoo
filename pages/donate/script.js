@@ -20,6 +20,6 @@ for (let i = 0; i < footerNavigationLinks.length; i++) {
 
 for (let i = 0; i < optionsInput.length; i++) {
   optionsInput[i].addEventListener("click", function () {
-    optionsInput[i].removeAttribute("checked");
+    optionsInput[i + 1].removeAttribute("checked");
   });
 }

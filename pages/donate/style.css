@@ -399,6 +399,10 @@ header nav ul li a:active {
 .progress-bar__step input[type="radio"]:checked + label {
   color: var(--orange-light);
 }
+.progress-bar__step input[type="radio"]:hover + label {
+  color: var(--white);
+  background-color: var(--orange-dark);
+}
 
 .progress-bar__step:not(:last-child):before,
 .progress-bar__step:not(:last-child):after {
@@ -446,8 +450,8 @@ input[type="number"] {
   display: flex;
   flex-direction: row;
   gap: 44px;
-  margin-top: 12px;
-  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .options__item {
@@ -474,15 +478,13 @@ input[type="number"] {
 
 .options__item input[type="radio"]:default {
   appearance: none;
-  margin: 0;
   font: inherit;
-  color: var(--orange-light);
+  color: var(--orange-hover);
+  background-color: var(--green);
   width: 16px;
   height: 16px;
   border: 1px solid currentColor;
   border-radius: 50%;
-  display: grid;
-  place-content: center;
 }
 
 .options__item input[type="radio"]:active,
@@ -498,20 +500,10 @@ input[type="number"] {
   border-radius: 50%;
 }
 
-.options__item input[type="radio"]:default + .options__label {
-  background-color: var(--background--light);
-  width: 112px;
-  height: 43px;
-  display: grid;
-  place-content: center;
-  margin-left: -30px;
-}
-
 .options__item input[type="radio"]:hover + .options__label,
 .options__item input[type="radio"]:active + .options__label,
 .options__item input[type="radio"]:focus + .options__label {
   background-color: transparent;
-  height: 43px;
   display: grid;
   place-content: center;
 }
@@ -534,6 +526,37 @@ input[type="number"] {
   width: 100%;
   height: 450px;
   background-color: var(--black);
+  color: var(--white);
+}
+
+.footer__logo {
+  position: relative;
+  flex-grow: 1;
+  padding: 5px;
+  width: 84.5px;
+  height: 52px;
+  border: 1.18841px solid var(--white);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.footer__logo:hover {
+  background-color: var(--orange-hover);
+}
+
+.footer__logo img {
+  position: absolute;
+  left: 12.23px;
+  top: 21.64px;
+
+  width: 7.03px;
+  height: 20.98px;
+}
+
+.footer__logo p.footer__logo--text {
+  font-size: 19.01px;
+  text-align: center;
+  margin: auto;
   color: var(--white);
 }
 
@@ -560,10 +583,10 @@ input[type="number"] {
   gap: 8px;
 }
 
-.social--item p:hover,
-.scial--item p:active,
-.social--item img:hover {
-  color: var(--green);
+.social--item:hover,
+.social--item:active {
+  background: var(--green);
+  width: 150px;
 }
 
 .social--item {
@@ -645,19 +668,24 @@ input[type="number"] {
   height: 42px;
   cursor: pointer;
   background: var(--gray-light);
-  border: 1px solid var(--gray);
+  border: 1px solid var(--orange-dark);
   color: var(--black);
   border-radius: 5px;
 }
 
+.button__submit:hover {
+  background: var(--orange-dark);
+}
+
 .button__submit:focus {
-  background: var(--gray-light);
+  background: var(--green);
   border: 1px solid var(--green);
-  color: var(--green);
+  color: var(--white);
 }
 
 .footer__form input:focus:invalid + .button__submit {
-  color: var(--red--error);
+  background-color: var(--red--error);
+  color: var(--white);
   border: 1px solid var(--red--error);
 }
 
