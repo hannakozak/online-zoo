@@ -99,6 +99,14 @@ p {
   max-width: 1160px;
   margin: 0 auto;
 }
+
+@media (max-width: 1000px) {
+  .content__container {
+    max-width: 1000px;
+    padding: 0 30px;
+  }
+}
+
 section,
 header {
   min-width: 1600;
