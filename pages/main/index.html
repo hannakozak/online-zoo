@@ -39,6 +39,9 @@
               </li>
             </ul>
           </nav>
+          <div class="header__hamburger">
+            <img src="../../assets/images/burger_menu.png" alt="hamburger icon" />
+          </div>
         </div>
       </div>
     </header>
@@ -184,19 +187,25 @@
           </p>
           <h3>How it works</h3>
           <div class="diagram">
-            <div class="diagram__item">
+            <div class="diagram__item diagram__icon--1">
               <img src="../../assets/icons/pay_icon.svg" />
             </div>
             <div class="diagram__arrow">
               <img src="../../assets/icons/vector.svg" />
             </div>
-            <div class="diagram__item">
+            <div class="diagram__arrow--640">
+              <img src="../../assets/images/arrow-600.png" />
+            </div>
+            <div class="diagram__item diagram__icon--2">
               <img src="../../assets/icons/zoo_icon.svg" />
             </div>
             <div class="diagram__arrow">
               <img src="../../assets/icons/vector.svg" />
             </div>
-            <div class="diagram__item">
+            <div class="diagram__arrow--640">
+              <img src="../../assets/images/arrow-600.png" />
+            </div>
+            <div class="diagram__item diagram__icon--3">
               <img src="../../assets/icons/monkey_icon.svg" />
             </div>
             <p class="diagram__item--text1">Pay with card</p>
@@ -304,73 +313,76 @@
     </main>
     <footer class="footer">
       <div class="content__container footer__wrapper">
-        <div class="footer__column column--1">
+        <div class="footer__logo">
           <a href="../main/index.html">
-            <div class="header__logo footer__logo">
+            <div class="header__logo logo">
               <h1>PetStory online</h1>
               <img src="../../assets/images/bamboo.svg" alt="bamboo svg on logo" />
             </div>
           </a>
+        </div>
+
+        <div class="footer__button">
           <a href="/pages/donate/index.html"
             ><button class="button--orange button--square footer--donate">Donate For Volunteers</button></a
           >
-          <div class="footer__social">
-            <a href="https://www.facebook.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/facebook.svg" />
-                </div>
-                <p>Facebook</p>
-              </div>
-            </a>
-            <a href="https://twitter.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/twitter.svg" />
-                </div>
-                <p>Twitter</p>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/Instagram.svg" />
-                </div>
-                <p>Instagram</p>
-              </div>
-            </a>
-            <a href="https://www.youtube.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/youtube.svg" />
-                </div>
-                <p>Youtube</p>
-              </div>
-            </a>
-          </div>
         </div>
 
-        <div class="footer__column column--2">
-          <nav>
-            <ul class="footer__nav">
-              <li class="footer__link current"><a href="#About">About</a></li>
-              <li class="footer__link"><a href="#Map">Map</a></li>
-              <li class="footer__link"><a href="#Zoos">Zoos</a></li>
-              <li class="footer__link"><a href="#Contact us">Contact us</a></li>
-            </ul>
-          </nav>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/facebook.svg" />
+              </div>
+              <p>Facebook</p>
+            </div>
+          </a>
+          <a href="https://twitter.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/twitter.svg" />
+              </div>
+              <p>Twitter</p>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/Instagram.svg" />
+              </div>
+              <p>Instagram</p>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/youtube.svg" />
+              </div>
+              <p>Youtube</p>
+            </div>
+          </a>
         </div>
 
-        <div class="footer__column column--3">
+        <nav class="footer__navigation">
+          <ul class="footer__nav">
+            <li class="footer__link current"><a href="#About">About</a></li>
+            <li class="footer__link"><a href="#Map">Map</a></li>
+            <li class="footer__link"><a href="#Zoos">Zoos</a></li>
+            <li class="footer__link"><a href="#Contact us">Contact us</a></li>
+          </ul>
+        </nav>
+
+        <form class="footer__form">
           <p class="subtitle">Subscribe to our news</p>
-          <form class="footer__form">
+          <div class="footer__form-group">
             <input type="email" placeholder="Enter Your Email" required />
             <button class="button__submit">Submit</button>
-          </form>
-          <div class="footer__copywrittes">
-            <p>Designed by Alisa Samborskaya</p>
-            <p>©RSSchool & ©Yem Digital 2021</p>
           </div>
+        </form>
+
+        <div class="footer__copywrittes">
+          <p>Designed by Alisa Samborskaya</p>
+          <p>©RSSchool & ©Yem Digital 2021</p>
         </div>
       </div>
     </footer>
