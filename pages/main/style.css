@@ -532,7 +532,7 @@ header nav ul li a:active {
 
 @media (max-width: 320px) {
   .backstage {
-    background: url(../../assets/images/flower-foto-320.png) no-repeat right top -40px;
+    background: url(../../assets/images/flower-foto-320.png) no-repeat right top -5px;
   }
 }
 
@@ -572,6 +572,12 @@ header nav ul li a:active {
     flex-direction: column;
     padding: 0 20px;
     margin-top: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .backstage__wrapper h2 {
+    font-size: 24px;
   }
 }
 
@@ -768,7 +774,7 @@ header nav ul li a:active {
   .pets__gallery {
     display: flex;
     flex-direction: column;
-    margin-top: -12px;
+    margin-top: 8px;
     gap: 20px;
   }
 }
@@ -1742,14 +1748,6 @@ progress::-moz-progress-bar {
     height: 282px;
   }
 }
-
-@media (max-width: 320px) {
-  .footer {
-    height: 334px;
-    margin-top: -10px;
-  }
-}
-
 .footer a {
   color: var(--white);
 }

@@ -74,9 +74,9 @@
                 <div class="progress-bar__wrapper">
                   <p class="progress-bar__title">Amount</p>
                   <div class="progress-bar__container">
-                    <div class="progress-bar__step">
+                    <div class="progress-bar__step step-500">
                       <input class="step__counter" type="radio" id="5000" value="5000" />
-                      <label class="step__name" for="5000">$2000</label>
+                      <label class="step__name" for="5000">$5000</label>
                     </div>
 
                     <div class="progress-bar__step">
@@ -139,74 +139,75 @@
 
     <footer class="footer">
       <div class="content__container footer__wrapper">
-        <div class="footer__column column--1">
+        <div class="footer__logo">
           <a href="../main/index.html">
-            <div class="footer__logo">
-              <p class="footer__logo--text">PetStory online</p>
+            <div class="header__logo logo">
+              <h1>PetStory online</h1>
               <img src="../../assets/images/bamboo.svg" alt="bamboo svg on logo" />
             </div>
           </a>
-          <a href="../donate/index.html"
+        </div>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/facebook.svg" />
+              </div>
+              <p>Facebook</p>
+            </div>
+          </a>
+          <a href="https://twitter.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/twitter.svg" />
+              </div>
+              <p>Twitter</p>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/Instagram.svg" />
+              </div>
+              <p>Instagram</p>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/">
+            <div class="social--item">
+              <div class="social--item-icon">
+                <img src="../../assets/icons/youtube.svg" />
+              </div>
+              <p>Youtube</p>
+            </div>
+          </a>
+        </div>
+        <div class="footer__button">
+          <a href="/pages/donate/index.html"
             ><button class="button--orange button--square footer--donate">Donate For Volunteers</button></a
           >
-          <div class="footer__social">
-            <a href="https://www.facebook.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/facebook.svg" />
-                </div>
-                <p>Facebook</p>
-              </div>
-            </a>
-            <a href="https://twitter.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/twitter.svg" />
-                </div>
-                <p>Twitter</p>
-              </div>
-            </a>
-            <a href="https://www.instagram.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/Instagram.svg" />
-                </div>
-                <p>Instagram</p>
-              </div>
-            </a>
-            <a href="https://www.youtube.com/">
-              <div class="social--item">
-                <div class="social--item-icon">
-                  <img src="../../assets/icons/youtube.svg" />
-                </div>
-                <p>Youtube</p>
-              </div>
-            </a>
-          </div>
         </div>
 
-        <div class="footer__column column--2">
-          <nav>
-            <ul class="footer__nav">
-              <li class="footer__link"><a href="../main/index.html">About</a></li>
-              <li class="footer__link"><a href="#Map">Map</a></li>
-              <li class="footer__link"><a href="#Zoos">Zoos</a></li>
-              <li class="footer__link"><a href="#Contact us">Contact us</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="footer__column column--3">
+        <form class="footer__form">
           <p class="subtitle">Subscribe to our news</p>
-          <form class="footer__form">
+          <div class="footer__form-group">
             <input type="email" placeholder="Enter Your Email" required />
             <button class="button__submit">Submit</button>
-          </form>
-          <div class="footer__copywrittes">
-            <p>Designed by Alisa Samborskaya</p>
-            <p>©RSSchool & ©Yem Digital 2021</p>
           </div>
+        </form>
+
+        <div class="footer__copywrittes">
+          <p>Designed by Alisa Samborskaya</p>
+          <p>©RSSchool & ©Yem Digital 2021</p>
         </div>
+
+        <nav class="footer__navigation">
+          <ul class="footer__nav">
+            <li class="footer__link current"><a href="#About">About</a></li>
+            <li class="footer__link"><a href="#Map">Map</a></li>
+            <li class="footer__link"><a href="#Zoos">Zoos</a></li>
+            <li class="footer__link"><a href="#Contact us">Contact us</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
     <script src="./script.js" type="module"></script>
