@@ -532,7 +532,7 @@ header nav ul li a:active {
 
 @media (max-width: 320px) {
   .backstage {
-    background: url(../../assets/images/flower-foto-320.png) no-repeat right top -5px;
+    background: url(../../assets/images/flower-foto-320.png) no-repeat right top -40px;
   }
 }
 
@@ -558,9 +558,18 @@ header nav ul li a:active {
     margin-left: -8px;
   }
 }
+
+@media (max-width: 320px) {
+  .backstage__wrapper h2 {
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 320px) {
   .backstage__wrapper {
     flex-direction: column;
+    padding: 0 20px;
+    margin-top: 50px;
   }
 }
 
