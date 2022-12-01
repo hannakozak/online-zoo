@@ -757,7 +757,7 @@ header nav ul li a:active {
 
 @media (max-width: 1000px) {
   .pets__gallery {
-    grid-template-columns: 0px 294px 294px 294px 0px;
+    grid-template-columns: 294px 294px 294px;
     grid-template-rows: 354px 80px 354px;
     column-gap: 30px;
     row-gap: 5px;
@@ -789,6 +789,13 @@ header nav ul li a:active {
   grid-column: 2 / 3;
 }
 
+@media (max-width: 1000px) {
+  .pandas {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+}
+
 @media (max-width: 640px) {
   .pandas {
     grid-row: 1 / 2;
@@ -801,6 +808,13 @@ header nav ul li a:active {
   grid-column: 3 / 4;
 }
 
+@media (max-width: 1000px) {
+  .eagle {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+}
+
 @media (max-width: 640px) {
   .eagle {
     grid-row: 1 / 2;
@@ -811,6 +825,13 @@ header nav ul li a:active {
 .gorilla {
   grid-row: 1 / 2;
   grid-column: 4 / 5;
+}
+
+@media (max-width: 1000px) {
+  .gorilla {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+  }
 }
 
 @media (max-width: 640px) {
@@ -832,6 +853,7 @@ header nav ul li a:active {
 
 @media (max-width: 1000px) {
   .arrows-container {
+    grid-column: 1 / 4;
     justify-content: center;
     gap: 170px;
     margin-top: 5px;
@@ -859,6 +881,13 @@ header nav ul li a:active {
   grid-column: 2 / 3;
 }
 
+@media (max-width: 1000px) {
+  .sloth {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+}
+
 @media (max-width: 640px) {
   .sloth {
     grid-row: 3 / 4;
@@ -871,6 +900,12 @@ header nav ul li a:active {
   grid-column: 3 / 4;
 }
 
+@media (max-width: 1000px) {
+  .cheetahs {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+}
 @media (max-width: 640px) {
   .cheetahs,
   .penguines {
@@ -880,6 +915,13 @@ header nav ul li a:active {
 .penguines {
   grid-row: 3 / 4;
   grid-column: 4 / 5;
+}
+
+@media (max-width: 1000px) {
+  .penguines {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+  }
 }
 
 .gallery__card {
