@@ -160,7 +160,6 @@ footer {
 header {
   height: 80px;
   background: var(--black);
-  backdrop-filter: blur(2px);
   color: var(--white);
 }
 
@@ -169,7 +168,6 @@ header {
     height: 34px;
     position: fixed;
     background: var(--black);
-    backdrop-filter: blur(0px);
   }
 }
 .header__wrapper {
@@ -256,6 +254,8 @@ header nav ul {
   align-items: center;
   list-style: none;
   padding-left: 37px;
+  margin-top: -50px;
+  margin-left: 70px;
 }
 
 @media (max-width: 1000px) {
@@ -325,24 +325,105 @@ header nav ul li a:active {
   }
 }
 
-.header__hamburger {
+.navigation__nav {
   display: none;
 }
-
+.navigation__icon--open {
+  display: none;
+}
 @media (max-width: 640px) {
-  .header__hamburger {
+  .navigation__icon--open {
     display: block;
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 20px;
   }
 }
 
 @media (max-width: 320px) {
-  .header__hamburger {
+  .navigation__icon--open {
     top: 5px;
     right: 10px;
   }
+}
+
+@media (max-width: 640px) {
+  .navigation__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .navigation__item {
+    padding: 1rem;
+    text-align: left;
+    list-style: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .navigation__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__logo--mobile h1 {
+    color: var(--orange-dark);
+    width: 20px;
+    border: 1px solid;
+    width: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__logo--mobile img {
+    fill: orange;
+  }
+}
+
+@media (max-width: 640px) {
+  .navigation__link {
+    padding: 1rem;
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+  }
+}
+
+.showMenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  top: 50px;
+  right: 50px;
+  left: 50px;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: var(--white);
+}
+
+.overlay {
+  position: fixed;
+  z-index: 2;
+  top: 34px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, hsla(0, 0%, 60%, 0.9), hsla(13, 100%, 96%, 0.1));
+  cursor: pointer;
 }
 /*Watch Your Favorite Animal Section*/
 
@@ -1369,7 +1450,7 @@ header nav ul li a:active {
   }
 }
 
-@media (max-width: 3200px) {
+@media (max-width: 320px) {
   .diagram__arrow {
     display: none;
   }

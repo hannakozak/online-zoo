@@ -18,13 +18,13 @@
   <body>
     <header>
       <div class="content__container">
+        <a href="../main/index.html">
+          <div class="header__logo">
+            <h1>PetStory online</h1>
+            <img src="../../assets/images/bamboo.svg" alt="bamboo svg on logo" />
+          </div>
+        </a>
         <div class="header__wrapper">
-          <a href="../main/index.html">
-            <div class="header__logo">
-              <h1>PetStory online</h1>
-              <img src="../../assets/images/bamboo.svg" alt="bamboo svg on logo" />
-            </div>
-          </a>
           <nav>
             <ul class="header__nav">
               <li class="header__link"><a href="../main/index.html">About</a></li>
@@ -39,8 +39,43 @@
               </li>
             </ul>
           </nav>
-          <div class="header__hamburger">
-            <img src="../../assets/images/burger_menu.png" alt="hamburger icon" />
+
+          <img src="../../assets/images/burger_menu.png" alt="hamburger icon" class="navigation__icon--open" />
+
+          <div class="navigation__overlay">
+            <nav class="navigation__nav">
+              <div class="navigation__header">
+                <a href="../main/index.html">
+                  <div class="header__logo header__logo--mobile">
+                    <h1>PetStory online</h1>
+                    <img src="../../assets/images/bamboo.svg" alt="bamboo svg on logo" />
+                  </div>
+                </a>
+                <img src="../../assets/icons/x_icon.svg" alt="navgitation close" class="navigation__icon--close" />
+              </div>
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="../../pages/main/index.html" class="navigation__link active">About</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Map</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Zoo</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="../../pages/donate/index.html" class="navigation__link">Donate</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link">Contact us</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks?node-id=126%3A0"
+                    >Designed by &copy</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -213,6 +248,6 @@
         </nav>
       </div>
     </footer>
-    <script src="./script.js" type="module"></script>
+    <script src="../../pages/donate/script.js" type="module"></script>
   </body>
 </html>
