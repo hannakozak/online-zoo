@@ -94,14 +94,51 @@ function rangeValue(e) {
 
 elem.addEventListener("input", rangeValue);
 
-//testimonial pop up
+//testimonial popup
+
 const testimonialsCards = document.querySelectorAll(".testimonials__card");
 
-const openPopup = (card) => {
-  console.log("pop up");
+const popupModal = (index) => {
+  const modalOverlay = document.createElement("div");
+  modalOverlay.setAttribute("class", "overlay");
+
+  const modal = document.createElement("div");
+  modal.setAttribute("class", modal);
+
+  const closeButton = document.createElement("div");
+  closeButton.setAttribute("class", "modal-close");
+  closeButton.innerHTML = "X";
+
+  closeButton.addEventListener("click", (e) => {
+    modalOverlay.style.display = "none";
+  });
+
+  testimonialsCards[index].style.minHeight = "60vh";
+  testimonialsCards[index].style.marginTop = "40px";
+
+  modal.appendChild(closeButton);
+  modal.appendChild(testimonialsCards[index]);
+
+  modalOverlay.appendChild(modal);
+
+  window.addEventListener("click", outsideClick);
+  function outsideClick(e) {
+    if (e.target == modalOverlay) {
+      modalOverlay.style.display = "none";
+    }
+  }
+  return modalOverlay;
 };
-if (window.matchMedia("(max-width: 1000px)")) {
-  testimonialsCards.forEach((card) => {
-    card.addEventListener("click", openPopup(card));
+
+const openPopup = (index) => {
+  const modal = popupModal(index);
+  modal.style.display = "block";
+  testimonialsWrapper.appendChild(modal);
+};
+if (window.innerWidth === 640) {
+  testimonialsCards.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      openPopup(index);
+    });
   });
 }
