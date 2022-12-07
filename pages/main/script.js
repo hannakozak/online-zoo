@@ -54,7 +54,7 @@ let generateSlide = () => {
   let media = window.matchMedia("(max-width: 640px)");
   let cardsNumber = media ? 4 : 6;
   for (let i = 0; i < cardsNumber; i++) {
-    slider.appendChild(slider.children[Math.floor(Math.random() * slider.children.length)]);
+    slider.appendChild(slider.children[Math.floor(Math.random() * i)]);
   }
   return slider;
 };
@@ -90,7 +90,18 @@ function rangeValue(e) {
   } else {
     testimonialsWrapper.scrollLeft = 260 * e.target.value;
   }
-  console.log("slider");
 }
 
 elem.addEventListener("input", rangeValue);
+
+//testimonial pop up
+const testimonialsCards = document.querySelectorAll(".testimonials__card");
+
+const openPopup = (card) => {
+  console.log("pop up");
+};
+if (window.matchMedia("(max-width: 1000px)")) {
+  testimonialsCards.forEach((card) => {
+    card.addEventListener("click", openPopup(card));
+  });
+}

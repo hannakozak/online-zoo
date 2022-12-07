@@ -1732,6 +1732,21 @@ header nav ul li a:active {
   }
 }
 
+@media (max-width: 640px) {
+  .testimonials__card:nth-child(4),
+  .testimonials__card:nth-child(5),
+  .testimonials__card:nth-child(6),
+  .testimonials__card:nth-child(7) {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  input[type="range"] {
+    display: none;
+  }
+}
+
 @media (max-width: 320px) {
   .testimonials__card {
     width: 299px;
