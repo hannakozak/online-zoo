@@ -79,3 +79,14 @@ const slideRight = () => {
 
 arrowRight.addEventListener("click", slideRight);
 arrowLeft.addEventListener("click", slideLeft);
+// testimonial slider
+
+var elem = document.querySelector('input[type="range"]');
+const testimonialsWrapper = document.querySelector(".testimonials__card--wrapper");
+
+function rangeValue(e) {
+  testimonialsWrapper.scrollLeft = 240 * e.target.value;
+  console.log("slider");
+}
+
+elem.addEventListener("input", rangeValue);
