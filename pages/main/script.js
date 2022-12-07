@@ -85,7 +85,11 @@ var elem = document.querySelector('input[type="range"]');
 const testimonialsWrapper = document.querySelector(".testimonials__card--wrapper");
 
 function rangeValue(e) {
-  testimonialsWrapper.scrollLeft = 240 * e.target.value;
+  if (window.matchMedia("(max-width: 1000px)")) {
+    testimonialsWrapper.scrollLeft = 320 * e.target.value;
+  } else {
+    testimonialsWrapper.scrollLeft = 260 * e.target.value;
+  }
   console.log("slider");
 }
 

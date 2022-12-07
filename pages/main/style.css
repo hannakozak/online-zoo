@@ -1683,10 +1683,11 @@ header nav ul li a:active {
 
 @media (max-width: 1000px) {
   .testimonials__card--wrapper {
-    padding-top: 30px;
-    justify-content: space-between;
     width: 940px;
-    gap: 0px;
+    padding-top: 30px;
+    justify-content: flex-start;
+    width: 940px;
+    gap: 16px;
   }
 }
 
@@ -1704,12 +1705,6 @@ header nav ul li a:active {
   }
 }
 
-@media (max-width: 1000px) {
-  .testimonials__card:last-child {
-    display: none;
-  }
-}
-
 .testimonials__card {
   width: 267px;
   height: 391px;
@@ -1723,8 +1718,9 @@ header nav ul li a:active {
 }
 @media (max-width: 1000px) {
   .testimonials__card {
-    width: 295px;
-    padding: 10px 0px;
+    min-width: 293px;
+    padding: 10px;
+    margin-left: 10px;
   }
 }
 
