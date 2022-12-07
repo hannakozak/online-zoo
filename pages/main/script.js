@@ -1,5 +1,3 @@
-import { slides } from "../../assets/data/galleryData.js";
-
 const navigationLinks = document.getElementsByClassName("header__link");
 const footerNavigationLinks = document.getElementsByClassName("footer__link");
 
