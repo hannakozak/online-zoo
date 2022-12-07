@@ -342,6 +342,13 @@ header nav ul li a:active {
 }
 
 @media (max-width: 640px) {
+  .navigation__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
   .navigation__item {
     padding: 1rem;
     text-align: left;

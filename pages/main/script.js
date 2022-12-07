@@ -1,3 +1,5 @@
+import { slides } from "../../assets/data/galleryData.js";
+
 const navigationLinks = document.getElementsByClassName("header__link");
 const footerNavigationLinks = document.getElementsByClassName("footer__link");
 
@@ -43,3 +45,39 @@ overlay.addEventListener("click", toggleMenu);
 navigation.addEventListener("click", function (event) {
   event.stopPropagation();
 });
+
+// slider
+const slider = document.querySelector(".pets__gallery");
+const cards = document.querySelectorAll(".gallery__card");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+
+let generateSlide = () => {
+  let media = window.matchMedia("(max-width: 640px)");
+  let cardsNumber = media ? 4 : 6;
+  for (let i = 0; i < cardsNumber; i++) {
+    slider.appendChild(slider.children[Math.floor(Math.random() * slider.children.length)]);
+  }
+  return slider;
+};
+
+const slideLeft = () => {
+  cards.forEach((card) => {
+    card.classList.remove("slide-right");
+    card.classList.add("slide-left");
+  });
+
+  slider.replaceWith(generateSlide());
+};
+
+const slideRight = () => {
+  cards.forEach((card) => {
+    card.classList.remove("slide-left");
+    card.classList.add("slide-right");
+  });
+
+  slider.replaceWith(generateSlide());
+};
+
+arrowRight.addEventListener("click", slideRight);
+arrowLeft.addEventListener("click", slideLeft);

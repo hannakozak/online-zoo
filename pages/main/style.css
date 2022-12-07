@@ -425,6 +425,7 @@ header nav ul li a:active {
   background: linear-gradient(to top, hsla(0, 0%, 60%, 0.9), hsla(13, 100%, 96%, 0.1));
   cursor: pointer;
 }
+
 /*Watch Your Favorite Animal Section*/
 
 #watchAnimal {
@@ -830,7 +831,7 @@ header nav ul li a:active {
   margin: 0 auto;
   margin-left: -50px;
   display: grid;
-  grid-template-columns: 16px 366px 366px 366px 16px;
+  grid-template-columns: 366px 366px 366px;
   grid-template-rows: 426px 25px 426px;
   column-gap: 30px;
   row-gap: 0px;
@@ -864,7 +865,7 @@ header nav ul li a:active {
     gap: 20px;
   }
 }
-
+/*
 .pandas {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
@@ -921,14 +922,15 @@ header nav ul li a:active {
     grid-column: 1 / 2;
   }
 }
+*/
 .arrows-container {
   grid-row: 2 / 3;
-  grid-column: 1 / 6;
+  grid-column: 1 / 4;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: -30px;
-  margin-right: -30px;
+  margin-left: -80px;
+  margin-right: -80px;
   margin-top: -120px;
 }
 
@@ -956,7 +958,7 @@ header nav ul li a:active {
     display: none;
   }
 }
-
+/*
 .sloth {
   grid-row: 3 / 4;
   grid-column: 2 / 3;
@@ -987,12 +989,15 @@ header nav ul li a:active {
     grid-column: 2 / 3;
   }
 }
+*/
 @media (max-width: 640px) {
-  .cheetahs,
-  .penguines {
+  .gallery__card:nth-child(5),
+  .gallery__card:nth-child(6) {
     display: none;
   }
 }
+
+/*
 .penguines {
   grid-row: 3 / 4;
   grid-column: 4 / 5;
@@ -1004,7 +1009,7 @@ header nav ul li a:active {
     grid-column: 3 / 4;
   }
 }
-
+*/
 .gallery__card {
   border: 2px solid var(--orange-card);
   border-radius: 5px;
@@ -1117,6 +1122,26 @@ header nav ul li a:active {
     margin-top: -4px;
   }
 }
+.slide-left {
+  animation: slideLeft 1s;
+}
+
+.slide-right {
+  animation: slideRight 1s;
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translateX(-300%);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    transform: translateX(300%);
+  }
+}
+
 /* feed */
 .feed {
   width: 100%;
