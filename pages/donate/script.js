@@ -49,3 +49,35 @@ overlay.addEventListener("click", toggleMenu);
 navigation.addEventListener("click", function (event) {
   event.stopPropagation();
 });
+//donate panel
+const donateAmount = document.querySelector(".donate-amount__input");
+const steps = document.querySelectorAll('input[name="step"]');
+
+let stepsValues = [];
+
+steps.forEach((step) => stepsValues.push(step.value));
+
+let selectedValue = document.querySelector('input[name="step"]:checked').value;
+donateAmount.value = selectedValue;
+
+steps.forEach((step) => {
+  step.addEventListener("change", (event) => {
+    donateAmount.value = event.target.value;
+  });
+});
+
+function onStepChange(event) {
+  event.target.value = event.target.value.substr(0, 4);
+  let currentValue = event.target.value;
+
+  if (stepsValues.includes(currentValue)) {
+    document.querySelector(`input[value="${currentValue}"]`).checked = true;
+  } else {
+    let currentCheckedInput = document.querySelector('input[name="step"]:checked');
+    if (currentCheckedInput) {
+      currentCheckedInput.checked = false;
+    }
+  }
+}
+
+donateAmount.addEventListener("input", onStepChange);
