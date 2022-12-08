@@ -107,7 +107,7 @@ const testimonialsCards = document.querySelectorAll(".testimonials__card");
 
 const popupModal = (index) => {
   const modalOverlay = document.createElement("div");
-  modalOverlay.setAttribute("class", "overlay");
+  modalOverlay.setAttribute("class", "modal-overlay");
 
   const modal = document.createElement("div");
   modal.setAttribute("class", modal);
@@ -138,6 +138,7 @@ const popupModal = (index) => {
 };
 
 const openPopup = (index) => {
+  console.log("dupa");
   const modal = popupModal(index);
   modal.style.display = "block";
   testimonialsWrapper.appendChild(modal);
