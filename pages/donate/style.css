@@ -148,10 +148,10 @@ header {
 }
 
 /* header */
+
 header {
   height: 80px;
   background: var(--black);
-  backdrop-filter: blur(2px);
   color: var(--white);
 }
 
@@ -160,8 +160,6 @@ header {
     height: 34px;
     position: fixed;
     background: var(--black);
-    backdrop-filter: blur(0px);
-    z-index: 10;
   }
 }
 .header__wrapper {
@@ -345,14 +343,24 @@ header nav ul li a:active {
   .navigation__list {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    align-items: flex-start;
+    color: var(--gray);
   }
 }
 
 @media (max-width: 640px) {
   .navigation__item {
-    padding: 1rem;
+    padding: 10px;
     text-align: left;
     list-style: none;
+    color: var(--gray);
+  }
+}
+
+@media (max-width: 320px) {
+  .navigation__list {
+    margin: 0;
   }
 }
 
@@ -362,7 +370,7 @@ header nav ul li a:active {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 10px;
   }
 }
@@ -370,9 +378,8 @@ header nav ul li a:active {
 @media (max-width: 640px) {
   .header__logo--mobile h1 {
     color: var(--orange-dark);
-    width: 20px;
-    border: 1px solid;
     width: 50px;
+    border: 1px solid;
   }
 }
 
@@ -384,10 +391,9 @@ header nav ul li a:active {
 
 @media (max-width: 640px) {
   .navigation__link {
-    padding: 1rem;
     color: var(--gray);
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 16px;
     text-decoration: none;
     transition: all 0.5s ease-out;
   }
@@ -398,18 +404,27 @@ header nav ul li a:active {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  text-align: left;
-  top: 50px;
+  gap: 5px;
+  top: 10px;
   right: 50px;
   left: 50px;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0 10px;
+  border-radius: 1rem;
   background-color: var(--white);
+}
+
+@media (max-width: 320px) {
+  .showMenu {
+    right: 10px;
+    left: 10px;
+    padding: 5px;
+    gap: 0px;
+  }
 }
 
 .overlay {
   position: fixed;
-  z-index: 2;
+  z-index: 20;
   top: 34px;
   left: 0;
   right: 0;
@@ -419,23 +434,24 @@ header nav ul li a:active {
   background: linear-gradient(to top, hsla(0, 0%, 60%, 0.9), hsla(13, 100%, 96%, 0.1));
   cursor: pointer;
 }
+
 /*feed */
 
 .feed__image {
-  background: url("../../assets/images/giant-panda.jpg") var(--black) no-repeat center;
+  background: url("../../assets/images/giant-panda.jpg") no-repeat center;
   height: 387px;
   width: 100%;
 }
 @media (max-width: 1000px) {
   .feed__image {
-    background: url("../../assets/images/panda-1000.png") var(--black) no-repeat center;
+    background: url("../../assets/images/panda-1000.png") no-repeat center;
     height: 390px;
   }
 }
 
 @media (max-width: 640px) {
   .feed__image {
-    background: url("../../assets/images/panda-640.png") var(--black) no-repeat center;
+    background: url("../../assets/images/panda-640.png") no-repeat center;
     height: 335px;
     margin-top: 34px;
   }
@@ -473,9 +489,10 @@ header nav ul li a:active {
       #eaf7fe 127.9%,
       #eaf7fe 149.54%
     );
-  opacity: 0.9;
+
   padding-top: 40px;
   padding-bottom: 180px;
+  z-index: -100;
 }
 
 @media (max-width: 1000px) {

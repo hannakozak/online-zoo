@@ -24,7 +24,6 @@ for (let i = 0; i < optionsInput.length; i++) {
   });
 }
 //navigation
-
 const navigationIcon = document.querySelector(".navigation__icon");
 const iconClose = document.querySelector(".navigation__icon--close");
 const iconOpen = document.querySelector(".navigation__icon--open");
@@ -39,7 +38,7 @@ function toggleMenu(event) {
     iconClose.style.display = "none";
   } else {
     navigation.classList.add("showMenu");
-    iconOpen.style.display = "none";
+    iconClose.style.display = "block";
   }
 }
 
