@@ -992,8 +992,9 @@ header nav ul li a:active {
 */
 @media (max-width: 640px) {
   .gallery__card:nth-child(5),
-  .gallery__card:nth-child(6) {
-    display: none;
+  .gallery__card:nth-child(6),
+  .gallery__card:nth-child(7) {
+    display: none !important;
   }
 }
 
