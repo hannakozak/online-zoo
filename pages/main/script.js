@@ -51,8 +51,7 @@ const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
 let generateSlide = () => {
-  let media = window.matchMedia("(max-width: 640px)");
-  let cardsNumber = media ? 4 : 6;
+  let cardsNumber = (window.innerWidth = 1000 ? 4 : 6);
   for (let i = 0; i < cardsNumber; i++) {
     slider.appendChild(slider.children[Math.floor(Math.random() * i)]);
   }
@@ -60,21 +59,29 @@ let generateSlide = () => {
 };
 
 const slideLeft = () => {
+  arrowLeft.removeEventListener("click", slideLeft);
   cards.forEach((card) => {
     card.classList.remove("slide-right");
     card.classList.add("slide-left");
   });
 
   slider.replaceWith(generateSlide());
+  setTimeout(() => {
+    arrowLeft.addEventListener("click", slideLeft);
+  }, 1000);
 };
 
 const slideRight = () => {
+  arrowRight.removeEventListener("click", slideRight);
   cards.forEach((card) => {
     card.classList.remove("slide-left");
     card.classList.add("slide-right");
   });
 
   slider.replaceWith(generateSlide());
+  setTimeout(() => {
+    arrowRight.addEventListener("click", slideRight);
+  }, 1000);
 };
 
 arrowRight.addEventListener("click", slideRight);
@@ -85,11 +92,11 @@ var elem = document.querySelector('input[type="range"]');
 const testimonialsWrapper = document.querySelector(".testimonials__card--wrapper");
 
 function rangeValue(e) {
-  if (window.matchMedia("(max-width: 1000px)")) {
-    testimonialsWrapper.scrollLeft = 320 * e.target.value;
-  } else {
-    testimonialsWrapper.scrollLeft = 260 * e.target.value;
+  if (window.matchMedia("(max-width: 1005px)")) {
+    testimonialsWrapper.scrollLeft = 360 * e.target.value;
   }
+
+  testimonialsWrapper.scrollLeft = 260 * e.target.value;
 }
 
 elem.addEventListener("input", rangeValue);
