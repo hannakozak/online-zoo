@@ -1758,7 +1758,12 @@ header nav ul li a:active {
   .testimonials__card:nth-child(4),
   .testimonials__card:nth-child(5),
   .testimonials__card:nth-child(6),
-  .testimonials__card:nth-child(7) {
+  .testimonials__card:nth-child(7),
+  .testimonials__card:nth-child(8)
+    .testimonials__card:nth-child(9)
+    .testimonials__card:nth-child(10)
+    .testimonials__card:nth-child(11)
+    .testimonials__card:nth-child(12) {
     display: none;
   }
 }
