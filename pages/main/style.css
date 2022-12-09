@@ -1922,7 +1922,7 @@ input[type="range"]::-moz-progress-bar {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 150px;
+  width: 80px;
   height: 8px;
   border-radius: 5px;
   background-color: #f9804b;
@@ -1931,7 +1931,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 @media (max-width: 1000px) {
   input[type="range"]::-webkit-slider-thumb {
-    width: 65px;
+    width: 40px;
   }
 }
 /* footer */

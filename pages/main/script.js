@@ -58,11 +58,10 @@ let generateSlide = () => {
   return slider;
 };
 
-const slideLeft = () => {
+const slideLeft = (e) => {
   arrowLeft.removeEventListener("click", slideLeft);
   cards.forEach((card) => {
-    card.classList.remove("slide-right");
-    card.classList.add("slide-left");
+    card.scroll({ behavior: "smooth", left: 320 });
   });
 
   slider.replaceWith(generateSlide());
@@ -95,7 +94,7 @@ function rangeValue(e) {
   if (window.innerWidth <= 1000) {
     testimonialsWrapper.scroll({ behavior: "smooth", left: 320 * e.target.value });
   } else {
-    testimonialsWrapper.scroll({ behavior: "smooth", left: 260 * e.target.value });
+    testimonialsWrapper.scroll({ behavior: "smooth", left: 265 * e.target.value });
   }
 }
 
