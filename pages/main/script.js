@@ -92,11 +92,11 @@ var elem = document.querySelector('input[type="range"]');
 const testimonialsWrapper = document.querySelector(".testimonials__card--wrapper");
 
 function rangeValue(e) {
-  if (window.matchMedia("(max-width: 1005px)")) {
-    testimonialsWrapper.scrollLeft = 360 * e.target.value;
+  if (window.innerWidth <= 1000) {
+    testimonialsWrapper.scroll({ behavior: "smooth", left: 320 * e.target.value });
+  } else {
+    testimonialsWrapper.scroll({ behavior: "smooth", left: 260 * e.target.value });
   }
-
-  testimonialsWrapper.scrollLeft = 260 * e.target.value;
 }
 
 elem.addEventListener("input", rangeValue);
