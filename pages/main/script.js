@@ -137,7 +137,6 @@ const popupModal = (index) => {
 };
 
 const openPopup = (index) => {
-  console.log("dupa");
   const modal = popupModal(index);
   modal.style.display = "block";
   testimonialsWrapper.appendChild(modal);
