@@ -51,7 +51,7 @@ const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 
 let generateSlide = () => {
-  let cardsNumber = (window.innerWidth = 1000 ? 4 : 6);
+  let cardsNumber = (window.innerWidth = 640 ? 4 : 6);
   for (let i = 0; i < cardsNumber; i++) {
     slider.appendChild(slider.children[Math.floor(Math.random() * i)]);
   }
@@ -60,27 +60,35 @@ let generateSlide = () => {
 
 const slideLeft = (e) => {
   arrowLeft.removeEventListener("click", slideLeft);
+  arrowRight.removeEventListener("click", slideRight);
   cards.forEach((card) => {
-    card.scroll({ behavior: "smooth", left: 320 });
+    card.classList.remove("slide-right");
+    card.classList.add("slide-left");
   });
 
   slider.replaceWith(generateSlide());
+
   setTimeout(() => {
     arrowLeft.addEventListener("click", slideLeft);
+    arrowRight.addEventListener("click", slideRight);
   }, 1000);
 };
 
 const slideRight = () => {
+  arrowLeft.removeEventListener("click", slideLeft);
   arrowRight.removeEventListener("click", slideRight);
+
   cards.forEach((card) => {
     card.classList.remove("slide-left");
     card.classList.add("slide-right");
   });
 
   slider.replaceWith(generateSlide());
+
   setTimeout(() => {
+    arrowLeft.addEventListener("click", slideLeft);
     arrowRight.addEventListener("click", slideRight);
-  }, 1000);
+  }, 1200);
 };
 
 arrowRight.addEventListener("click", slideRight);

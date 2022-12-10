@@ -848,7 +848,6 @@ header nav ul li a:active {
 .pets__gallery {
   align-items: center;
   margin: 0 auto;
-  margin-left: -50px;
   display: grid;
   grid-template-columns: 366px 366px 366px;
   grid-template-rows: 426px 25px 426px;
@@ -862,7 +861,9 @@ header nav ul li a:active {
     grid-template-rows: 354px 80px 354px;
     column-gap: 30px;
     row-gap: 5px;
-    margin-left: 0px;
+    margin-left: 50px;
+    width: 1000px;
+    overflow-x: hidden;
   }
 }
 
@@ -872,7 +873,10 @@ header nav ul li a:active {
     grid-template-rows: 332px 80px 332px;
     column-gap: 30px;
     row-gap: 5px;
-    margin-left: 0px;
+    margin-left: 20px;
+    width: 640px;
+    overflow-y: hidden;
+    height: 755px;
   }
 }
 
@@ -882,6 +886,8 @@ header nav ul li a:active {
     flex-direction: column;
     margin-top: 8px;
     gap: 20px;
+    margin-left: 0;
+    width: 320px;
   }
 }
 /*
