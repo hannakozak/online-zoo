@@ -1,3 +1,7 @@
+window.onresize = function (event) {
+  document.location.reload(true);
+};
+
 const navigationLinks = document.getElementsByClassName("header__link");
 const footerNavigationLinks = document.getElementsByClassName("footer__link");
 
